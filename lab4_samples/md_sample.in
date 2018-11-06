@@ -4,12 +4,12 @@
     atom_style atomic
     dimension  3
     boundary   p p p
-    read_data /home/bond/WORK/Lab4/Problem1/size_3/lammps.data
+    read_data /home/modeler/labutil/lab4_samples/lammps.data
 
-    pair_style eam/alloy
-    pair_coeff * * /home/bond/Software/lammps-17Nov16/potentials/Al_zhou.eam.alloy  Al
+    pair_style eam
+    pair_coeff * * /home/modeler/labutil/lab4_samples/Ag_u3.eam
 
-    velocity  all create 300 87287 dist gaussian
+    velocity  all create 300 12345 dist gaussian
 
     # ---------- Describe computed properties------------------
     compute msdall all msd
@@ -17,14 +17,15 @@
     thermo 100
 
     # ---------- Specify ensemble  ---------------------
-    #fix  1 all nve
-    fix  1 all nvt temp 300 300 0.05
+    # fix  1 all nve
+    # fix  1 all nvt temp 300 300 0.05
+    # fix  1 all npt temp 300 300 0.05 tchain 2 iso 1.0 1.0 1.0 pchain 2
 
     # --------- Compute RDF ---------------
     compute rdfall all rdf 100 1 1
-    fix 2 all ave/time 1 250 250 c_rdfall[*] file /home/bond/WORK/Lab4/Problem1/size_3/lammps.rdf mode vector
+    fix 2 all ave/time 1 250 250 c_rdfall[*] file /home/modeler/labutil/lab4_samples/lammps.rdf mode vector
 
     # --------- Run -------------
     timestep 0.001
-    run 1000
+    run 100000
     
