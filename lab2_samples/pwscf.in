@@ -1,8 +1,8 @@
 &CONTROL
     tstress = .true.
     tprnfor = .true.
-    pseudo_dir = '/home/bond/Software/qe-6.0/pseudo'
-    outdir = '/home/bond/WORK/Lab2/test'
+    pseudo_dir = '/home/modeler/qe_pseudo'
+    outdir = '/home/modeler/WORK/Lab2/test'
     calculation = 'scf'
 /
 &SYSTEM
