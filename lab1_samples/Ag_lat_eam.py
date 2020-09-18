@@ -1,3 +1,5 @@
+import sys
+sys.path.append("/home/modeler/labutil/")
 from labutil.src.plugins.lammps import *
 from ase.spacegroup import crystal
 from ase.build import *
@@ -14,8 +16,8 @@ boundary   p p p
 read_data $DATAINPUT
 
 # ---------- 2. Specify interatomic potential ---------------------
-pair_style eam/alloy
-pair_coeff * * $POTENTIAL  Ag
+pair_style eam
+pair_coeff * * $POTENTIAL
 
 # pair_style lj/cut 4.5
 # pair_coeff 1 1 0.3450 2.6244 4.5
@@ -52,7 +54,7 @@ def compute_energy(alat, template):
     Make an input template and select potential and structure, and the path where to run
     """
     potpath = os.path.join(os.environ['LAMMPS_POTENTIALS'],'Ag_u3.eam')
-    potential = ClassicalPotential(path=potpath, ptype='eam', element=["Al"])
+    potential = ClassicalPotential(path=potpath, ptype='eam', element=["Ag"])
     runpath = Dir(path=os.path.join(os.environ['WORKDIR'], "Lab1", str(alat)))
     struc = make_struc(alat=alat)
     output_file = lammps_run(struc=struc, runpath=runpath, potential=potential, intemplate=template, inparam={})
