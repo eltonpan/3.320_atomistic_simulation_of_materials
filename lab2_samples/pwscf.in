@@ -1,8 +1,8 @@
 &CONTROL
     tstress = .true.
     tprnfor = .true.
-    pseudo_dir = '/home/modeler/qe_pseudo'
-    outdir = '/home/modeler/WORK/Lab2/test'
+    pseudo_dir = '/home/gridsan/rafagb/3320_atomistic_shared/q-e/pseudo/'
+    outdir = '/home/gridsan/rafagb/labutil/lab2_samples'
     calculation = 'scf'
 /
 &SYSTEM
@@ -23,7 +23,7 @@
 K_POINTS {automatic}
  4 4 4  0 0 0
 ATOMIC_SPECIES
-  Ge 72.61 Ge.pz-bhs.UPF
+  Ge 72.61 Ge.pz-dn-rrkjus_psl.0.2.2.UPF
 CELL_PARAMETERS {angstrom}
  0.0 2.5 2.5
  2.5 0.0 2.5
