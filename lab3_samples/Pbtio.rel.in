@@ -1,10 +1,10 @@
 &CONTROL
-    pseudo_dir = '/home/bond/Software/qe-6.1/pseudo'
+    pseudo_dir = '/home/gridsan/rafagb/3320_atomistic_shared/q-e/pseudo'
     calculation = 'relax'
     disk_io = 'none'
     tstress = .true.
     tprnfor = .true.
-    outdir = '/home/bond/WORK/Lab3/Problem2/Ti_displ_0.0'
+    outdir = '/home/gridsan/rafagb/labutil/lab3_samples/workdir/'
 / 
 &SYSTEM
     nat = 5

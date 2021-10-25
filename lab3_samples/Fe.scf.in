@@ -1,8 +1,8 @@
 &CONTROL
     calculation = 'scf'
-    outdir = '/home/bond/WORK/Lab3/Problem1/3.0'
+    outdir = '/home/gridsan/rafagb/bond/WORK/Lab3/Problem1/3.0'
     tprnfor = .true.
-    pseudo_dir = '/home/bond/Software/qe-6.1/pseudo'
+    pseudo_dir = '/home/gridsan/rafagb/3320_atomistic_shared/q-e/pseudo'
     tstress = .true.
     disk_io = 'none'
 / 

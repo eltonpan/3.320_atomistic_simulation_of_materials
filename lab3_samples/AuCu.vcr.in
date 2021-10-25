@@ -2,8 +2,8 @@
     calculation = 'vc-relax'
     tprnfor = .true.
     tstress = .true.
-    pseudo_dir = '/home/bond/Software/qe-6.1/pseudo'
-    outdir = '/home/bond/WORK/Lab3/Problem3/AuCu0_3.0'
+    pseudo_dir = '/home/gridsan/rafagb/3320_atomistic_shared/q-e/pseudo'
+    outdir = '/home/gridsan/rafagb/labutil/lab3_samples/workdir/AuCu0_3.0'
     disk_io = 'none'
 / 
 &SYSTEM
