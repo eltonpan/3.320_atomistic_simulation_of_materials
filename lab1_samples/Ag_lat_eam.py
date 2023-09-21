@@ -1,8 +1,8 @@
 import sys
-sys.path.append("/home/modeler/labutil/")
+import os
+sys.path.append("/home/gridsan/{}/".format(os.environ['USER']))
 from labutil.src.plugins.lammps import *
 from ase.spacegroup import crystal
-from ase.build import *
 import numpy
 import matplotlib.pyplot as plt
 
@@ -16,11 +16,11 @@ boundary   p p p
 read_data $DATAINPUT
 
 # ---------- 2. Specify interatomic potential ---------------------
-pair_style eam
-pair_coeff * * $POTENTIAL
+# pair_style eam
+# pair_coeff * * $POTENTIAL
 
-# pair_style lj/cut 4.5
-# pair_coeff 1 1 0.3450 2.6244 4.5
+pair_style lj/cut 4.5
+pair_coeff 1 1 0.3450 2.6244 4.5
 
 # ---------- 3. Run single point calculation  ---------------------
 thermo_style custom step pe lx ly lz press pxx pyy pzz
@@ -63,13 +63,17 @@ def compute_energy(alat, template):
 
 
 def lattice_scan():
-    alat_list = numpy.linspace(3.8, 4.3, 7)
+    alat_list = numpy.linspace(3.8, 4.4, 20)
     energy_list = [compute_energy(alat=a, template=input_template)[0] for a in alat_list]
     print(energy_list)
     plt.plot(alat_list, energy_list)
+    plt.savefig('Ag_lat_eam.png')
     plt.show()
 
 
 if __name__ == '__main__':
     # put here the function that you actually want to run
+    os.environ['LAMMPS_COMMAND']    = '/home/gridsan/{}/3320_atomistic_shared/lammps/src/lmp_serial'.format(os.environ['USER'])
+    os.environ['LAMMPS_POTENTIALS'] = '/home/gridsan/{}/3320_atomistic_shared/lammps/potentials'.format(os.environ['USER'])
+    os.environ['WORKDIR']           = os.getcwd()
     lattice_scan()
