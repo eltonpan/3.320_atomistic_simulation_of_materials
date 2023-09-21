@@ -6,7 +6,7 @@ from ase.spacegroup import crystal
 import numpy
 import matplotlib.pyplot as plt
 
-
+# For scanning
 input_template = """
 # ---------- 1. Initialize simulation ---------------------
 units metal
@@ -26,6 +26,13 @@ pair_coeff 1 1 0.3450 2.6244 4.5
 thermo_style custom step pe lx ly lz press pxx pyy pzz
 run 0
 
+# -- include optimization of the unit cell parameter
+# fix 1 all box/relax iso 0.0 vmax 0.001
+
+# -- enable optimization of atomic positions (and the cell) 
+min_style cg
+minimize 1e-10 1e-10 1000 10000
+
 # ---- 4. Define and print useful variables -------------
 variable natoms equal "count(all)"
 variable totenergy equal "pe"
@@ -34,7 +41,42 @@ variable length equal "lx"
 print "Total energy (eV) = ${totenergy}"
 print "Number of atoms = ${natoms}"
 print "Lattice constant (Angstoms) = ${length}"
-        """
+       """
+
+# For optimization
+input_template_for_opt = """
+# ---------- 1. Initialize simulation --------------------- 
+units metal
+atom_style atomic
+dimension 3
+boundary   p p p
+read_data $DATAINPUT
+
+# ---------- 2. Specify interatomic potential ------------- 
+pair_style lj/cut 4.5
+pair_coeff 1 1 0.3450 2.6244 4.5
+# pair_style eam
+# pair_coeff * * $POTENTIAL
+
+# ---------- 3. Run the calculation ----------------
+# -- perform a single-point energy calculation only 
+run 0
+
+# # -- include optimization of the unit cell parameter
+fix 1 all box/relax iso 0.0 vmax 0.001
+
+# # -- enable optimization of atomic positions (and the cell) 
+min_style cg
+minimize 1e-10 1e-10 10000 100000 # need to increase maxiter and maxeval for optimizer to converge
+
+# ---- 4. Define and print useful variables ------------- 
+variable natoms equal "count(all)"
+variable totenergy equal "pe"
+variable length equal "lx"
+print "Total energy (eV) = ${totenergy}"
+print "Number of atoms = ${natoms}"
+print "Lattice constant (Angstoms) = ${length}"
+"""
 
 def make_struc(alat):
     """
@@ -63,12 +105,24 @@ def compute_energy(alat, template):
 
 
 def lattice_scan():
-    alat_list = numpy.linspace(3.8, 4.4, 20)
+    alat_list = numpy.linspace(3.8, 4.4, 10)
     energy_list = [compute_energy(alat=a, template=input_template)[0] for a in alat_list]
-    print(energy_list)
-    plt.plot(alat_list, energy_list)
-    plt.savefig('Ag_lat_eam.png')
+    print('---Without optimization---')
+    print('lattice params:', alat_list)
+    print('energies:', energy_list)
+    plt.scatter(alat_list, energy_list)
+    plt.xlabel('Lattice constant ($\AA$)')
+    plt.ylabel('Energy (eV)')
+    plt.savefig('Ag_lat_eam.png', dpi = 100)
     plt.show()
+
+
+def lattice_scan_with_optimization():
+    alat_list = numpy.linspace(3.8, 4.4, 10)
+    optimized_energy_list = [compute_energy(alat=a, template=input_template_for_opt)[0] for a in alat_list]
+    print('---With optimization---')
+    print('lattice params:', alat_list)
+    print('optimized energies:', optimized_energy_list)
 
 
 if __name__ == '__main__':
@@ -77,3 +131,5 @@ if __name__ == '__main__':
     os.environ['LAMMPS_POTENTIALS'] = '/home/gridsan/{}/3320_atomistic_shared/lammps/potentials'.format(os.environ['USER'])
     os.environ['WORKDIR']           = os.getcwd()
     lattice_scan()
+    print()
+    lattice_scan_with_optimization()
