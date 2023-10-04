@@ -1,0 +1,67 @@
+LAMMPS (29 Oct 2020)
+Reading data file ...
+  orthogonal box = (0.0000000 0.0000000 0.0000000) to (61.350000 61.350000 61.350000)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  13500 atoms
+  read_data CPU = 0.009 seconds
+Reading eam potential file /home/gridsan/epan1/3320_atomistic_shared/lammps/potentials/Ag_u3.eam with DATE: 2007-06-11
+WARNING: Using 'neigh_modify every 1 delay 0 check yes' setting during minimization (../min.cpp:187)
+Neighbor list info ...
+  update every 1 steps, delay 0 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.55
+  ghost atom cutoff = 7.55
+  binsize = 3.775, bins = 17 17 17
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair eam, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 0
+WARNING: Energy due to 1 extra global DOFs will be included in minimizer energies
+Per MPI rank memory allocation (min/avg/max) = 10.59 | 10.59 | 10.59 Mbytes
+Step PotEng Lx Ly Lz Press Pxx Pyy Pzz 
+       0       -38475        61.35        61.35        61.35 -0.058146225 -0.058146225 -0.058146225 -0.058146225 
+       1       -38475    61.349999    61.349999    61.349999 -0.00033946203 -0.00033946209 -0.000339462 -0.00033946198 
+Loop time of 0.0491579 on 1 procs for 1 steps with 13500 atoms
+
+99.8% CPU use with 1 MPI tasks x no OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -38475.0000212268  -38475.0000212268   -38475.000021271
+  Force two-norm initial, final = 0.025140628 0.00014677287
+  Force max component initial, final = 0.025140628 0.00014677287
+  Final line search alpha, max atom move = 0.039776254 5.8380749e-06
+  Iterations, force evaluations = 1 2
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.047371   | 0.047371   | 0.047371   |   0.0 | 96.37
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0.00021195 | 0.00021195 | 0.00021195 |   0.0 |  0.43
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.001575   |            |       |  3.20
+
+Nlocal:        13500.0 ave       13500 max       13500 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:        11826.0 ave       11826 max       11826 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:       580500.0 ave      580500 max      580500 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 580500
+Ave neighs/atom = 43.000000
+Neighbor list builds = 0
+Dangerous builds = 0
+Total energy (eV) = -38475.000021271
+Number of atoms = 13500
+Lattice constant (Angstoms) = 61.3499988604724
+Total wall time: 0:00:00

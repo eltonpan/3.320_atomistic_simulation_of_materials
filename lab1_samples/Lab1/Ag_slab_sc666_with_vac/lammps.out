@@ -1,0 +1,56 @@
+LAMMPS (29 Oct 2020)
+Reading data file ...
+  orthogonal box = (0.0000000 0.0000000 0.0000000) to (17.517900 17.517900 30.322500)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  215 atoms
+  read_data CPU = 0.001 seconds
+WARNING: No fixes defined, atoms won't move (../verlet.cpp:54)
+Neighbor list info ...
+  update every 1 steps, delay 10 steps, check yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 6.5
+  ghost atom cutoff = 6.5
+  binsize = 3.25, bins = 6 6 10
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 3.068 | 3.068 | 3.068 Mbytes
+Step PotEng Lx Ly Lz Press Pxx Pyy Pzz 
+       0   -442.01633      17.5179      17.5179      30.3225     229.1032   -1222.1849   -1222.1849    3131.6793 
+Loop time of 9.53674e-07 on 1 procs for 0 steps with 215 atoms
+
+0.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 9.537e-07  |            |       |100.00
+
+Nlocal:        215.000 ave         215 max         215 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:        444.000 ave         444 max         444 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:        4719.00 ave        4719 max        4719 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 4719
+Ave neighs/atom = 21.948837
+Neighbor list builds = 0
+Dangerous builds = 0
+Total energy (eV) = -442.01632811328
+Number of atoms = 215
+Lattice constant (Angstoms) = 17.5179
+Total wall time: 0:00:00

@@ -1,4 +1,4 @@
-LAMMPS (17 Nov 2016)
+LAMMPS (29 Oct 2020)
 
 # ---------- 1. Initialize simulation ---------------------
 units metal
@@ -6,15 +6,17 @@ atom_style atomic
 dimension  3
 boundary   p p p
 read_data lammps.data
-  orthogonal box = (0 0 0) to (3.9 3.9 3.9)
+Reading data file ...
+  orthogonal box = (0.0000000 0.0000000 0.0000000) to (3.9000000 3.9000000 3.9000000)
   1 by 1 by 1 MPI processor grid
   reading atoms ...
   4 atoms
+  read_data CPU = 0.002 seconds
 
 # ---------- 2. Specify interatomic potential ---------------------
-pair_style eam/alloy
-pair_coeff * * /home/bond/Software/lammps-17Nov16/potentials/Al_zhou.eam.alloy  Al
-Reading potential file /home/bond/Software/lammps-17Nov16/potentials/Al_zhou.eam.alloy with DATE: 2007-10-12
+pair_style eam
+pair_coeff * * /home/gridsan/epan1/3320_atomistic_shared/lammps/potentials/Ag_u3.eam
+Reading eam potential file /home/gridsan/epan1/3320_atomistic_shared/lammps/potentials/Ag_u3.eam with DATE: 2007-06-11
 
 # pair_style lj/cut 4.5
 # pair_coeff 1 1 0.392 2.620 4.5
@@ -22,17 +24,22 @@ Reading potential file /home/bond/Software/lammps-17Nov16/potentials/Al_zhou.eam
 # ---------- 3. Run single point calculation  ---------------------
 thermo_style custom step pe lx ly lz press pxx pyy pzz
 run 0
-WARNING: No fixes defined, atoms won't move (../verlet.cpp:55)
+WARNING: No fixes defined, atoms won't move (../verlet.cpp:54)
 Neighbor list info ...
-  1 neighbor list requests
   update every 1 steps, delay 10 steps, check yes
   max neighbors/atom: 2000, page size: 100000
-  master list distance cutoff = 12.1025
-  ghost atom cutoff = 12.1025
-  binsize = 6.05125 -> bins = 1 1 1
-Memory usage per processor = 2.69766 Mbytes
+  master list distance cutoff = 7.55
+  ghost atom cutoff = 7.55
+  binsize = 3.775, bins = 2 2 2
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair eam, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 3.209 | 3.209 | 3.209 Mbytes
 Step PotEng Lx Ly Lz Press Pxx Pyy Pzz 
-       0   -13.926157          3.9          3.9          3.9    155403.42    155403.42    155403.42    155403.42 
+       0   -10.883613          3.9          3.9          3.9    208470.58    208470.58    208470.58    208470.58 
 Loop time of 9.53674e-07 on 1 procs for 0 steps with 4 atoms
 
 0.0% CPU use with 1 MPI tasks x no OpenMP threads
@@ -47,15 +54,15 @@ Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
 Other   |            | 9.537e-07  |            |       |100.00
 
-Nlocal:    4 ave 4 max 4 min
+Nlocal:        4.00000 ave           4 max           4 min
 Histogram: 1 0 0 0 0 0 0 0 0 0
-Nghost:    1684 ave 1684 max 1684 min
+Nghost:        360.000 ave         360 max         360 min
 Histogram: 1 0 0 0 0 0 0 0 0 0
-Neighs:    1060 ave 1060 max 1060 min
+Neighs:        268.000 ave         268 max         268 min
 Histogram: 1 0 0 0 0 0 0 0 0 0
 
-Total # of neighbors = 1060
-Ave neighs/atom = 265
+Total # of neighbors = 268
+Ave neighs/atom = 67.000000
 Neighbor list builds = 0
 Dangerous builds = 0
 
@@ -65,10 +72,10 @@ variable totenergy equal "pe"
 variable length equal "lx"
 
 print "Total energy (eV) = ${totenergy}"
-Total energy (eV) = -13.9261570463024
+Total energy (eV) = -10.8836132844451
 print "Number of atoms = ${natoms}"
 Number of atoms = 4
 print "Lattice constant (Angstoms) = ${length}"
 Lattice constant (Angstoms) = 3.9
-        
+
 Total wall time: 0:00:00
