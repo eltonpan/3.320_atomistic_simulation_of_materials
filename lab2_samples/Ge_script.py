@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append("/home/gridsan/{}/".format(os.environ['USER']))
 from labutil.src.plugins.pwscf import *
 from ase.spacegroup import crystal
 from ase.io import write
@@ -22,9 +25,14 @@ def compute_energy(alat, nk, ecut):
     """
     Make an input template and select potential and structure, and the path where to run
     """
-    potname = 'Ge.pz-bhs.UPF'
-    pseudopath = os.environ['ESPRESSO_PSEUDO']
+    # potname = 'Ge.pz-bhs.UPF'
+    # pseudopath = os.environ['ESPRESSO_PSEUDO']
+
+    potname = 'Ge.pz-dn-rrkjus_psl.0.2.2.UPF'
+    pseudopath = './'
+
     potpath = os.path.join(pseudopath, potname)
+
     pseudopots = {'Ge': PseudoPotential(name=potname, path=potpath, ptype='uspp', element='Ge', functional='LDA')}
     struc = make_struc(alat=alat)
     kpts = Kpoints(gridsize=[nk, nk, nk], option='automatic', offset=False)
@@ -40,6 +48,9 @@ def compute_energy(alat, nk, ecut):
         },
         'SYSTEM': {
             'ecutwfc': ecut,
+            'nat': 2,
+            'ibrav': 0,
+            'ntyp': 1,
              },
         'ELECTRONS': {
             'diagonalization': 'david',
@@ -66,5 +77,7 @@ def lattice_scan():
 
 
 if __name__ == '__main__':
+    os.environ['WORKDIR']       = os.getcwd()
+    os.environ['PWSCF_COMMAND'] = "~/3320_atomistic_shared/qe-7.2/bin/pw.x"
     # put here the function that you actually want to run
     lattice_scan()
