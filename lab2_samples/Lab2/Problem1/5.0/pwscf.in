@@ -1,29 +1,30 @@
 &CONTROL
+    calculation = 'scf'
+    pseudo_dir = './'
+    outdir = '/home/gridsan/epan1/labutil/lab2_samples/Lab2/Problem1/5.0'
     tstress = .true.
     tprnfor = .true.
-    pseudo_dir = '/home/gridsan/epan1/labutil/lab2_samples'
-    outdir = '/home/gridsan/epan1/labutil/lab2_samples'
-    calculation = 'scf'
-/
+    disk_io = 'none'
+/ 
 &SYSTEM
+    ecutwfc = 20
     ntyp = 1
-    ibrav = 0
-    ecutwfc = 30
     nat = 2
-/
+    ibrav = 0
+/ 
 &ELECTRONS
     diagonalization = 'david'
-    conv_thr = 1e-07
     mixing_beta = 0.5
-/
+    conv_thr = 1e-07
+/ 
 &IONS
-/
+/ 
 &CELL
-/
+/ 
 K_POINTS {automatic}
- 4 4 4  0 0 0
+ 3 3 3  0 0 0
 ATOMIC_SPECIES
-  Ge 72.61 Ge.pz-dn-rrkjus_psl.0.2.2.UPF
+  Ge 72.63 Ge.pz-dn-rrkjus_psl.0.2.2.UPF
 CELL_PARAMETERS {angstrom}
  0.0 2.5 2.5
  2.5 0.0 2.5

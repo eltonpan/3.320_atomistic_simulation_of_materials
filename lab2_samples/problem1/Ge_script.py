@@ -31,7 +31,7 @@ def compute_energy(alat, nk, ecut):
     # pseudopath = os.environ['ESPRESSO_PSEUDO']
 
     potname = 'Ge.pz-dn-rrkjus_psl.0.2.2.UPF'
-    pseudopath = './'
+    pseudopath = '../'
 
     potpath = os.path.join(pseudopath, potname)
 

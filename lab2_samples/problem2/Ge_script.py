@@ -31,7 +31,7 @@ def compute_energy(alat, nk, ecut):
     # pseudopath = os.environ['ESPRESSO_PSEUDO']
 
     potname = 'Ge.pz-dn-rrkjus_psl.0.2.2.UPF'
-    pseudopath = './'
+    pseudopath = '../'
 
     potpath = os.path.join(pseudopath, potname)
 
@@ -80,31 +80,33 @@ if __name__ == '__main__':
     # put here the function that you actually want to run
 
     energies, times = [], []
-    ecuts = [int(x) for x in np.arange(5,80,5)]
-    for ecut in ecuts:
+    nks = [int(x) for x in np.arange(1,10)]
+    for nk in nks:
         start = time.time()
-        e = lattice_scan(ecut = ecut)
+        e = lattice_scan(nk = nk)
+        print(nk, e)
         end = time.time()
 
-        print(ecut, e)
         energies.append(e)
         times.append(end-start)
     
     print('energies', energies)
     print('times', times)
 
+    nks = np.array(nks)**3
+
     plt.figure()
-    plt.scatter(ecuts, energies)
-    plt.xlabel('Plane-wave cutoff energy (Ry)')
+    plt.scatter(nks, energies)
+    plt.xlabel('Number of k-points')
     plt.ylabel('Energy (eV)')
-    plt.savefig('1A.png', dpi = 100)
+    plt.savefig('2A.png', dpi = 100)
     plt.show()
 
     plt.figure()
-    plt.scatter(ecuts, times)
-    plt.xlabel('Plane-wave cutoff energy (Ry)')
+    plt.scatter(nks, times)
+    plt.xlabel('Number of k-points')
     plt.ylabel('Wall time (s)')
-    plt.savefig('1B.png', dpi = 100)
+    plt.savefig('2B.png', dpi = 100)
     plt.show()
 
     

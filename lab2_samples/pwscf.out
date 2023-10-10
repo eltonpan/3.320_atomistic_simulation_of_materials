@@ -1,5 +1,5 @@
 
-     Program PWSCF v.7.2 starts on  5Oct2023 at 13:23:20 
+     Program PWSCF v.7.2 starts on  7Oct2023 at 17:54:46 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -13,7 +13,7 @@
      Parallel version (MPI), running on     1 processors
 
      MPI processes distributed on     1 nodes
-     32727 MiB available memory on the printing compute node when the environment starts
+     25516 MiB available memory on the printing compute node when the environment starts
 
      Waiting for input...
      Reading input from standard input
@@ -71,7 +71,7 @@ Warning: card / ignored
 
 
      PseudoPot. # 1 for Ge read from file:
-     /home/gridsan/epan1/Ge.pz-dn-rrkjus_psl.0.2.2.UPF
+     /home/gridsan/epan1/labutil/lab2_samples/Ge.pz-dn-rrkjus_psl.0.2.2.UPF
      MD5 check sum: 9948ad5293734715c8cf6021b6c26e6d
      Pseudo is Ultrasoft + core correction, Zval = 14.0
      Generated using "atomic" code by A. Dal Corso  v.5.0.2 svn rev. 9415
@@ -120,7 +120,7 @@ Warning: card / ignored
      starting charge      27.9988, renormalised to      28.0000
      Starting wfcs are   18 randomized atomic wfcs
 
-     total cpu time spent up to now is        7.1 secs
+     total cpu time spent up to now is        5.8 secs
 
      Self-consistent Calculation
 
@@ -134,7 +134,7 @@ Warning: card / ignored
      Davidson diagonalization with overlap
      ethr =  2.26E-04,  avg # of iterations =  1.9
 
-     total cpu time spent up to now is       25.8 secs
+     total cpu time spent up to now is       24.5 secs
 
      total energy              =    -421.61406915 Ry
      estimated scf accuracy    <       0.06529384 Ry
@@ -143,7 +143,7 @@ Warning: card / ignored
      Davidson diagonalization with overlap
      ethr =  2.33E-04,  avg # of iterations =  1.2
 
-     total cpu time spent up to now is       34.6 secs
+     total cpu time spent up to now is       32.6 secs
 
      total energy              =    -421.61170746 Ry
      estimated scf accuracy    <       0.01061561 Ry
@@ -152,7 +152,7 @@ Warning: card / ignored
      Davidson diagonalization with overlap
      ethr =  3.79E-05,  avg # of iterations =  2.0
 
-     total cpu time spent up to now is       45.1 secs
+     total cpu time spent up to now is       42.4 secs
 
      total energy              =    -421.61278400 Ry
      estimated scf accuracy    <       0.00011098 Ry
@@ -161,7 +161,7 @@ Warning: card / ignored
      Davidson diagonalization with overlap
      ethr =  3.96E-07,  avg # of iterations =  3.0
 
-     total cpu time spent up to now is       56.9 secs
+     total cpu time spent up to now is       55.3 secs
 
      total energy              =    -421.61282721 Ry
      estimated scf accuracy    <       0.00001590 Ry
@@ -170,7 +170,7 @@ Warning: card / ignored
      Davidson diagonalization with overlap
      ethr =  5.68E-08,  avg # of iterations =  2.0
 
-     total cpu time spent up to now is       66.8 secs
+     total cpu time spent up to now is       64.8 secs
 
      total energy              =    -421.61282900 Ry
      estimated scf accuracy    <       0.00000081 Ry
@@ -179,7 +179,7 @@ Warning: card / ignored
      Davidson diagonalization with overlap
      ethr =  2.90E-09,  avg # of iterations =  2.6
 
-     total cpu time spent up to now is       80.2 secs
+     total cpu time spent up to now is       79.5 secs
 
      total energy              =    -421.61282931 Ry
      estimated scf accuracy    <       0.00000013 Ry
@@ -188,7 +188,7 @@ Warning: card / ignored
      Davidson diagonalization with overlap
      ethr =  4.73E-10,  avg # of iterations =  2.2
 
-     total cpu time spent up to now is       92.8 secs
+     total cpu time spent up to now is       90.6 secs
 
      End of self-consistent calculation
 
@@ -248,25 +248,25 @@ Warning: card / ignored
      Forces acting on atoms (cartesian axes, Ry/au):
 
      atom    1 type  1   force =     0.00000000    0.00000000    0.00000000
-     atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
+     atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000000
      The non-local contrib.  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000    0.00000000
-     atom    2 type  1   force =    -0.00000000    0.00000000   -0.00000000
+     atom    1 type  1   force =     0.00000000    0.00000000   -0.00000000
+     atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000000
      The ionic contribution  to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000000
      The local contribution  to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000    0.00000000
+     atom    1 type  1   force =    -0.00000000   -0.00000000   -0.00000000
      atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000000
      The core correction contribution to forces
-     atom    1 type  1   force =    -0.00000000   -0.00000000   -0.00000000
+     atom    1 type  1   force =    -0.00000000   -0.00000000    0.00000000
      atom    2 type  1   force =    -0.00000000   -0.00000000   -0.00000000
      The Hubbard contrib.    to forces
      atom    1 type  1   force =     0.00000000    0.00000000    0.00000000
      atom    2 type  1   force =     0.00000000    0.00000000    0.00000000
      The SCF correction term to forces
-     atom    1 type  1   force =     0.00000000   -0.00000000   -0.00000000
-     atom    2 type  1   force =    -0.00000000    0.00000000    0.00000000
+     atom    1 type  1   force =    -0.00000000   -0.00000000   -0.00000000
+     atom    2 type  1   force =     0.00000000   -0.00000000    0.00000000
 
      Total force =     0.000000     Total SCF correction =     0.000000
 
@@ -274,58 +274,58 @@ Warning: card / ignored
      Computing stress (Cartesian axis) and pressure
 
           total   stress  (Ry/bohr**3)                   (kbar)     P=      348.75
-   0.00237073   0.00000000   0.00000000          348.75        0.00        0.00
-  -0.00000000   0.00237073   0.00000000           -0.00      348.75        0.00
-   0.00000000  -0.00000000   0.00237073            0.00       -0.00      348.75
+   0.00237073  -0.00000000  -0.00000000          348.75       -0.00       -0.00
+  -0.00000000   0.00237073  -0.00000000           -0.00      348.75       -0.00
+  -0.00000000  -0.00000000   0.00237073           -0.00       -0.00      348.75
 
 
      Writing all to output data dir /home/gridsan/epan1/labutil/lab2_samples/pwscf.save/
 
-     init_run     :      4.48s CPU      6.21s WALL (       1 calls)
-     electrons    :     62.49s CPU     85.82s WALL (       1 calls)
-     forces       :      0.80s CPU      0.85s WALL (       1 calls)
-     stress       :      2.67s CPU      3.47s WALL (       1 calls)
+     init_run     :      3.72s CPU      5.04s WALL (       1 calls)
+     electrons    :     60.63s CPU     85.00s WALL (       1 calls)
+     forces       :      0.78s CPU      0.95s WALL (       1 calls)
+     stress       :      2.90s CPU      3.84s WALL (       1 calls)
 
      Called by init_run:
-     wfcinit      :      3.86s CPU      5.41s WALL (       1 calls)
+     wfcinit      :      3.07s CPU      4.24s WALL (       1 calls)
      potinit      :      0.00s CPU      0.01s WALL (       1 calls)
-     hinit0       :      0.40s CPU      0.43s WALL (       1 calls)
+     hinit0       :      0.43s CPU      0.45s WALL (       1 calls)
 
      Called by electrons:
-     c_bands      :     53.77s CPU     74.66s WALL (       8 calls)
-     sum_band     :      5.98s CPU      7.41s WALL (       8 calls)
-     v_of_rho     :      0.01s CPU      0.05s WALL (       8 calls)
-     newd         :      2.78s CPU      3.70s WALL (       8 calls)
-     mix_rho      :      0.00s CPU      0.03s WALL (       8 calls)
+     c_bands      :     52.30s CPU     73.59s WALL (       8 calls)
+     sum_band     :      5.48s CPU      7.40s WALL (       8 calls)
+     v_of_rho     :      0.00s CPU      0.04s WALL (       8 calls)
+     newd         :      2.87s CPU      3.79s WALL (       8 calls)
+     mix_rho      :      0.00s CPU      0.04s WALL (       8 calls)
 
      Called by c_bands:
-     init_us_2    :      0.31s CPU      0.62s WALL (     152 calls)
-     init_us_2:cp :      0.21s CPU      0.39s WALL (     152 calls)
-     cegterg      :     51.03s CPU     70.60s WALL (      64 calls)
+     init_us_2    :      0.41s CPU      0.49s WALL (     152 calls)
+     init_us_2:cp :      0.39s CPU      0.45s WALL (     152 calls)
+     cegterg      :     49.43s CPU     69.55s WALL (      64 calls)
 
      Called by *egterg:
-     cdiaghg      :      0.87s CPU      1.44s WALL (     192 calls)
-     h_psi        :     46.55s CPU     63.84s WALL (     208 calls)
-     s_psi        :      2.79s CPU      4.26s WALL (     208 calls)
+     cdiaghg      :      1.08s CPU      1.55s WALL (     192 calls)
+     h_psi        :     42.57s CPU     59.50s WALL (     208 calls)
+     s_psi        :      3.22s CPU      4.75s WALL (     208 calls)
      g_psi        :      0.03s CPU      0.05s WALL (     136 calls)
 
      Called by h_psi:
-     h_psi:calbec :     11.04s CPU     15.26s WALL (     208 calls)
-     vloc_psi     :      7.97s CPU     10.12s WALL (     208 calls)
-     add_vuspsi   :     27.15s CPU     37.83s WALL (     208 calls)
+     h_psi:calbec :      9.88s CPU     13.71s WALL (     208 calls)
+     vloc_psi     :      8.19s CPU     10.75s WALL (     208 calls)
+     add_vuspsi   :     24.05s CPU     34.26s WALL (     208 calls)
 
      General routines
-     calbec       :     12.27s CPU     16.51s WALL (     312 calls)
-     fft          :      0.16s CPU      0.18s WALL (      41 calls)
-     ffts         :      0.00s CPU      0.01s WALL (       8 calls)
-     fftw         :      6.61s CPU      8.64s WALL (    5616 calls)
+     calbec       :     11.10s CPU     15.06s WALL (     312 calls)
+     fft          :      0.17s CPU      0.18s WALL (      41 calls)
+     ffts         :      0.01s CPU      0.01s WALL (       8 calls)
+     fftw         :      7.08s CPU      9.60s WALL (    5616 calls)
 
      Parallel routines
 
-     PWSCF        :   1m10.70s CPU   1m37.46s WALL
+     PWSCF        :   1m 8.25s CPU   1m35.85s WALL
 
 
-   This run was terminated on:  13:24:58   5Oct2023            
+   This run was terminated on:  17:56:22   7Oct2023            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
