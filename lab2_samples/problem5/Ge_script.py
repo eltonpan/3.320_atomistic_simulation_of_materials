@@ -19,17 +19,11 @@ def make_struc(alat):
     gecell = crystal('Ge', [(0, 0, 0)], spacegroup=227, cellpar=[alat, alat, alat, 90, 90, 90], primitive_cell=True)
     # check how your cell looks like
     # write('s.cif', gecell)
-
-    # Displace a Ge atom +0.05 in the z direction (fractional coordinates)
-    frac_coords = gecell.get_scaled_positions()
-    frac_coords[-1][-1] += 0.05 # add to the z fractional coordinate of the 2nd atom
-    gecell.set_scaled_positions(frac_coords)
-    
     structure = Struc(ase2struc(gecell))
     return structure
 
 
-def compute_force(alat, nk, ecut):
+def compute_energy(alat, nk, ecut):
     """
     Make an input template and select potential and structure, and the path where to run
     """
@@ -72,13 +66,12 @@ def compute_force(alat, nk, ecut):
     return output
 
 
-def lattice_scan(nk = 4, ecut = 30, alat = 5.0):
-    output = compute_force(alat=alat, ecut=ecut, nk=nk)
+def lattice_scan(nk = 3, ecut = 30, alat = 5.0):
+    output = compute_energy(alat=alat, ecut=ecut, nk=nk)
     print(output)
-    force = output['force']
-    # *25.71104309541616 # convert from Ryd/Bohr to eV/Angstrom
+    energy = output['energy']/13.6057039763/2 # convert from Rydberg to eV/atom (2 atoms per primitive cell)
     
-    return force
+    return energy
 
 
 if __name__ == '__main__':
@@ -86,32 +79,32 @@ if __name__ == '__main__':
     os.environ['PWSCF_COMMAND'] = "~/3320_atomistic_shared/qe-7.2/bin/pw.x"
     # put here the function that you actually want to run
 
-    forces, times = [], []
+    energies, times = [], []
     ecuts = [int(x) for x in np.arange(5,80,5)]
     for ecut in ecuts:
         start = time.time()
-        f = lattice_scan(ecut = ecut)
+        e = lattice_scan(ecut = ecut)
         end = time.time()
 
-        print(ecut, f)
-        forces.append(f)
+        print(ecut, e)
+        energies.append(e)
         times.append(end-start)
     
-    print('forces', forces)
+    print('energies', energies)
     print('times', times)
 
     plt.figure()
-    plt.scatter(ecuts, forces)
+    plt.scatter(ecuts, energies)
     plt.xlabel('Plane-wave cutoff energy (Ry)')
-    plt.ylabel('Force (eV/Angstrom)')
-    plt.savefig('3.png', dpi = 100)
+    plt.ylabel('Energy (eV)')
+    plt.savefig('1A.png', dpi = 100)
     plt.show()
 
-    # plt.figure()
-    # plt.scatter(ecuts, times)
-    # plt.xlabel('Plane-wave cutoff energy (Ry)')
-    # plt.ylabel('Wall time (s)')
-    # plt.savefig('1B.png', dpi = 100)
-    # plt.show()
+    plt.figure()
+    plt.scatter(ecuts, times)
+    plt.xlabel('Plane-wave cutoff energy (Ry)')
+    plt.ylabel('Wall time (s)')
+    plt.savefig('1B.png', dpi = 100)
+    plt.show()
 
     

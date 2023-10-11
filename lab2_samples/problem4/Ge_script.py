@@ -17,14 +17,14 @@ def make_struc(alat):
     """
     # set primitive_cell=False if you want to create a simple cubic unit cell with 8 atoms
     gecell = crystal('Ge', [(0, 0, 0)], spacegroup=227, cellpar=[alat, alat, alat, 90, 90, 90], primitive_cell=True)
-    # check how your cell looks like
-    # write('s.cif', gecell)
-
+    
     # Displace a Ge atom +0.05 in the z direction (fractional coordinates)
     frac_coords = gecell.get_scaled_positions()
     frac_coords[-1][-1] += 0.05 # add to the z fractional coordinate of the 2nd atom
     gecell.set_scaled_positions(frac_coords)
     
+    # check how your cell looks like
+    # write('s.cif', gecell)
     structure = Struc(ase2struc(gecell))
     return structure
 
@@ -87,31 +87,33 @@ if __name__ == '__main__':
     # put here the function that you actually want to run
 
     forces, times = [], []
-    ecuts = [int(x) for x in np.arange(5,80,5)]
-    for ecut in ecuts:
+    nks = [int(x) for x in np.arange(1,10)]
+    for nk in nks:
         start = time.time()
-        f = lattice_scan(ecut = ecut)
+        f = lattice_scan(nk = nk)
+        print(nk, f)
         end = time.time()
 
-        print(ecut, f)
         forces.append(f)
         times.append(end-start)
     
     print('forces', forces)
     print('times', times)
 
+    nks = np.array(nks)**3
+
     plt.figure()
-    plt.scatter(ecuts, forces)
-    plt.xlabel('Plane-wave cutoff energy (Ry)')
+    plt.scatter(nks, forces)
+    plt.xlabel('Number of k-points')
     plt.ylabel('Force (eV/Angstrom)')
-    plt.savefig('3.png', dpi = 100)
+    plt.savefig('4.png', dpi = 100)
     plt.show()
 
     # plt.figure()
-    # plt.scatter(ecuts, times)
-    # plt.xlabel('Plane-wave cutoff energy (Ry)')
+    # plt.scatter(nks, times)
+    # plt.xlabel('Number of k-points')
     # plt.ylabel('Wall time (s)')
-    # plt.savefig('1B.png', dpi = 100)
+    # plt.savefig('2B.png', dpi = 100)
     # plt.show()
 
     
