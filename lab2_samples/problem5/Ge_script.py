@@ -66,9 +66,8 @@ def compute_energy(alat, nk, ecut):
     return output
 
 
-def lattice_scan(nk = 3, ecut = 30, alat = 5.0):
+def lattice_scan(nk = 4, ecut = 30, alat = 5.0):
     output = compute_energy(alat=alat, ecut=ecut, nk=nk)
-    print(output)
     energy = output['energy']/13.6057039763/2 # convert from Rydberg to eV/atom (2 atoms per primitive cell)
     
     return energy
@@ -83,10 +82,13 @@ if __name__ == '__main__':
     ecuts = [int(x) for x in np.arange(5,80,5)]
     for ecut in ecuts:
         start = time.time()
-        e = lattice_scan(ecut = ecut)
+        e1 = lattice_scan(ecut = ecut, alat = 5.5) 
+        e2 = lattice_scan(ecut = ecut, alat = 5.55)
+        e = e2-e1
         end = time.time()
 
         print(ecut, e)
+        print()
         energies.append(e)
         times.append(end-start)
     
@@ -96,15 +98,15 @@ if __name__ == '__main__':
     plt.figure()
     plt.scatter(ecuts, energies)
     plt.xlabel('Plane-wave cutoff energy (Ry)')
-    plt.ylabel('Energy (eV)')
-    plt.savefig('1A.png', dpi = 100)
+    plt.ylabel('Energy difference (eV)')
+    plt.savefig('5.png', dpi = 100)
     plt.show()
 
-    plt.figure()
-    plt.scatter(ecuts, times)
-    plt.xlabel('Plane-wave cutoff energy (Ry)')
-    plt.ylabel('Wall time (s)')
-    plt.savefig('1B.png', dpi = 100)
-    plt.show()
+    # plt.figure()
+    # plt.scatter(ecuts, times)
+    # plt.xlabel('Plane-wave cutoff energy (Ry)')
+    # plt.ylabel('Wall time (s)')
+    # plt.savefig('1B.png', dpi = 100)
+    # plt.show()
 
     
