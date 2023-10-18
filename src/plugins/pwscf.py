@@ -103,7 +103,6 @@ def parse_qe_pwscf_output(outfile):
             if line.lower().startswith('          total   stress'):
                 pressure = float(line.split()[-1])
             if line.lower().startswith('     number of k points='):
-                print("LINE: ",line)
                 n_unique_k_points = float(line.split()[-1])
     result = {'energy': total_energy, 'force': total_force, 'pressure': pressure, 'n_unique_k_points': n_unique_k_points}
     return result
