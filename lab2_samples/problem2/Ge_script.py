@@ -70,8 +70,9 @@ def lattice_scan(nk = 3, ecut = 30, alat = 5.0):
     output = compute_energy(alat=alat, ecut=ecut, nk=nk)
     print(output)
     energy = output['energy']/13.6057039763/2 # convert from Rydberg to eV/atom (2 atoms per primitive cell)
-    
-    return energy
+    n_unique_k_points = output['n_unique_k_points']
+
+    return energy, n_unique_k_points
 
 
 if __name__ == '__main__':
@@ -81,14 +82,16 @@ if __name__ == '__main__':
 
     energies, times = [], []
     nks = [int(x) for x in np.arange(1,10)]
+    nks_unique = []
     for nk in nks:
         start = time.time()
-        e = lattice_scan(nk = nk)
+        e, nk_unique = lattice_scan(nk = nk)
         print(nk, e)
         end = time.time()
 
         energies.append(e)
         times.append(end-start)
+        nks_unique.append(nk_unique)
     
     print('energies', energies)
     print('times', times)
@@ -96,14 +99,14 @@ if __name__ == '__main__':
     nks = np.array(nks)**3
 
     plt.figure()
-    plt.scatter(nks, energies)
+    plt.scatter(nks_unique, energies)
     plt.xlabel('Number of k-points')
     plt.ylabel('Energy (eV)')
     plt.savefig('2A.png', dpi = 100)
     plt.show()
 
     plt.figure()
-    plt.scatter(nks, times)
+    plt.scatter(nks_unique, times)
     plt.xlabel('Number of k-points')
     plt.ylabel('Wall time (s)')
     plt.savefig('2B.png', dpi = 100)

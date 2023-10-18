@@ -77,8 +77,9 @@ def lattice_scan(nk = 4, ecut = 30, alat = 5.0):
     print(output)
     force = output['force']
     # *25.71104309541616 # convert from Ryd/Bohr to eV/Angstrom
-    
-    return force
+    n_unique_k_points = output['n_unique_k_points']
+
+    return force, n_unique_k_points
 
 
 if __name__ == '__main__':
@@ -88,14 +89,16 @@ if __name__ == '__main__':
 
     forces, times = [], []
     nks = [int(x) for x in np.arange(1,10)]
+    nks_unique = []
     for nk in nks:
         start = time.time()
-        f = lattice_scan(nk = nk)
+        f, nk_unique  = lattice_scan(nk = nk)
         print(nk, f)
         end = time.time()
 
         forces.append(f)
         times.append(end-start)
+        nks_unique.append(nk_unique)
     
     print('forces', forces)
     print('times', times)
@@ -103,17 +106,10 @@ if __name__ == '__main__':
     nks = np.array(nks)**3
 
     plt.figure()
-    plt.scatter(nks, forces)
+    plt.scatter(nks_unique, forces)
     plt.xlabel('Number of k-points')
     plt.ylabel('Force (eV/Angstrom)')
     plt.savefig('4.png', dpi = 100)
     plt.show()
-
-    # plt.figure()
-    # plt.scatter(nks, times)
-    # plt.xlabel('Number of k-points')
-    # plt.ylabel('Wall time (s)')
-    # plt.savefig('2B.png', dpi = 100)
-    # plt.show()
 
     
