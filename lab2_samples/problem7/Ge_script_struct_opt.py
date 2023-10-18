@@ -91,6 +91,7 @@ if __name__ == '__main__':
     pressures.append(p)
     
     print('energies', energies) 
-    print('pressures', pressures) 
+    print('pressures', pressures)
+     
 
     
