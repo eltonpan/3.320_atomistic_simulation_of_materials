@@ -1,21 +1,21 @@
 &CONTROL
     calculation = 'scf'
-    outdir = '/home/gridsan/epan1/labutil/lab3_samples/Lab3/'
-    tprnfor = .true.
     pseudo_dir = '/home/gridsan/epan1/labutil/lab3_samples/pseudopotentials/'
+    outdir = '/home/gridsan/epan1/labutil/lab3_samples/Lab3/Fe_a_3.0_ecut_30_nk_3'
     tstress = .true.
+    tprnfor = .true.
     disk_io = 'none'
 / 
 &SYSTEM
-    smearing = 'mp'
-    occupations = 'smearing'
-    starting_magnetization(1) = 0.7
-    nat = 2
-    degauss = 0.02
     ecutwfc = 30
-    nspin = 2
-    ntyp = 1
     ecutrho = 240
+    nspin = 2
+    starting_magnetization(1) = 0.7
+    occupations = 'smearing'
+    smearing = 'mp'
+    degauss = 0.02
+    ntyp = 1
+    nat = 2
     ibrav = 0
 / 
 &ELECTRONS
@@ -27,10 +27,10 @@
 / 
 &CELL
 / 
-K_POINTS automatic
+K_POINTS {automatic}
  3 3 3  0 0 0
 ATOMIC_SPECIES
-  Fe 55.847 Fe.pbe-nd-rrkjus.UPF
+  Fe 55.845 Fe.pbe-nd-rrkjus.UPF
 CELL_PARAMETERS {angstrom}
  3.0 0.0 0.0
  -1.5 2.598076211353316 0.0

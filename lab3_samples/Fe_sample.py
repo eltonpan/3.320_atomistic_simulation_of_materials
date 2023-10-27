@@ -1,7 +1,11 @@
+import sys
+import os
+sys.path.append("/home/gridsan/{}/".format(os.environ['USER']))
 from labutil.src.plugins.pwscf import *
 from ase.spacegroup import crystal
 from ase.io import write
-from ase.build import *
+# from ase.build import *
+from ase.build import bulk
 import numpy
 import matplotlib.pyplot as plt
 
@@ -17,7 +21,7 @@ def make_struc(alat):
     # check how your cell looks like
     #write('s.cif', gecell)
     print(fecell, fecell.get_atomic_numbers())
-    fecell.set_atomic_numbers([26, 27])
+    # fecell.set_atomic_numbers([26, 27])
     structure = Struc(ase2struc(fecell))
     print(structure.species)
     return structure
@@ -31,17 +35,18 @@ def compute_energy(alat, nk, ecut):
     potpath = os.path.join(os.environ['ESPRESSO_PSEUDO'], potname)
     pseudopots = {'Fe': PseudoPotential(path=potpath, ptype='uspp', element='Fe',
                                         functional='GGA', name=potname),
-                  'Co': PseudoPotential(path=potpath, ptype='uspp', element='Fe',
-                                        functional='GGA', name=potname)
+                #   'Co': PseudoPotential(path=potpath, ptype='uspp', element='Fe',
+                #                         functional='GGA', name=potname)
                   }
     struc = make_struc(alat=alat)
     kpts = Kpoints(gridsize=[nk, nk, nk], option='automatic', offset=False)
     dirname = 'Fe_a_{}_ecut_{}_nk_{}'.format(alat, ecut, nk)
-    runpath = Dir(path=os.path.join(os.environ['WORKDIR'], "Lab3/Problem1", dirname))
+    # runpath = Dir(path=os.path.join(os.environ['WORKDIR'], "Lab3/Problem1", dirname))
+    runpath = Dir(path=os.path.join(os.getcwd(), "Lab3", dirname))
     input_params = PWscf_inparam({
         'CONTROL': {
             'calculation': 'scf',
-            'pseudo_dir': os.environ['ESPRESSO_PSEUDO'],
+            'pseudo_dir': '/home/gridsan/{}/labutil/lab3_samples/pseudopotentials/'.format(os.environ['USER']),
             'outdir': runpath.path,
             'tstress': True,
             'tprnfor': True,
@@ -80,5 +85,6 @@ def lattice_scan():
     print(output)
 
 if __name__ == '__main__':
+    os.environ["PWSCF_COMMAND"] = '/home/gridsan/epan1/3320_atomistic_shared/qe-7.2/bin/pw.x'
     # put here the function that you actually want to run
     lattice_scan()
