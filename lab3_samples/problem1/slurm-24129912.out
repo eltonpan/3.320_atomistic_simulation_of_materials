@@ -1,0 +1,31 @@
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_UNDERFLOW_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Atoms(symbols='Fe', pbc=True, cell=[[-1.4023197098499998, 1.4023197098499998, 1.4023197098499998], [1.4023197098499998, -1.4023197098499998, 1.4023197098499998], [1.4023197098499998, 1.4023197098499998, -1.4023197098499998]]) [26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -768.332715313406, 'force': 0.0, 'pressure': -1.67, 'n_unique_k_points': 0.02}
+Atoms(symbols='Fe', pbc=True, cell=[[-1.4023197098499998, 1.4023197098499998, 1.4023197098499998], [1.4023197098499998, -1.4023197098499998, 1.4023197098499998], [1.4023197098499998, 1.4023197098499998, -1.4023197098499998]]) [26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -758.1006715817545, 'force': 0.0, 'pressure': -16.03, 'n_unique_k_points': 0.02}
+Atoms(symbols='Fe', pbc=True, cell=[[-1.4023197098499998, 1.4023197098499998, 1.4023197098499998], [1.4023197098499998, -1.4023197098499998, 1.4023197098499998], [1.4023197098499998, 1.4023197098499998, -1.4023197098499998]]) [26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -759.359975130048, 'force': 0.0, 'pressure': -8.06, 'n_unique_k_points': 0.02}
+Atoms(symbols='Fe', pbc=True, cell=[[-1.4023197098499998, 1.4023197098499998, 1.4023197098499998], [1.4023197098499998, -1.4023197098499998, 1.4023197098499998], [1.4023197098499998, 1.4023197098499998, -1.4023197098499998]]) [26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -759.1995174183626, 'force': 0.0, 'pressure': -1.08, 'n_unique_k_points': 0.02}
+Atoms(symbols='Fe', pbc=True, cell=[[-1.4023197098499998, 1.4023197098499998, 1.4023197098499998], [1.4023197098499998, -1.4023197098499998, 1.4023197098499998], [1.4023197098499998, 1.4023197098499998, -1.4023197098499998]]) [26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -759.1573364889904, 'force': 0.0, 'pressure': -2.42, 'n_unique_k_points': 0.02}
+Atoms(symbols='Fe', pbc=True, cell=[[-1.4023197098499998, 1.4023197098499998, 1.4023197098499998], [1.4023197098499998, -1.4023197098499998, 1.4023197098499998], [1.4023197098499998, 1.4023197098499998, -1.4023197098499998]]) [26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -759.2585039699288, 'force': 0.0, 'pressure': -3.07, 'n_unique_k_points': 0.02}
+Atoms(symbols='Fe', pbc=True, cell=[[-1.4023197098499998, 1.4023197098499998, 1.4023197098499998], [1.4023197098499998, -1.4023197098499998, 1.4023197098499998], [1.4023197098499998, 1.4023197098499998, -1.4023197098499998]]) [26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -759.2351557757056, 'force': 0.0, 'pressure': -3.14, 'n_unique_k_points': 0.02}

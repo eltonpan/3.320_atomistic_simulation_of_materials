@@ -1,0 +1,67 @@
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[d-5-10-4:1816031] 7 more processes have sent help message help-mpi-api.txt / mpi-abort
+[d-5-10-4:1816031] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+STOP 3
+STOP 3
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+STOP 3
+STOP 3
+STOP 3
+STOP 3
+STOP 3
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[61843,1],2]
+  Exit code:    3
+--------------------------------------------------------------------------
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1528.5514319003541, 'force': 0.00041137665964925116, 'pressure': -151.81, 'n_unique_k_points': 0.02}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.1460970183732, 'force': 0.033912863379835144, 'pressure': -19.67, 'n_unique_k_points': 0.02}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.2895880163994, 'force': 2.5711041228078197e-05, 'pressure': -7.94, 'n_unique_k_points': 0.02}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.2404147106204, 'force': 0.0, 'pressure': -5.86, 'n_unique_k_points': 0.02}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.1050234567667, 'force': 0.00017997728859654738, 'pressure': -7.97, 'n_unique_k_points': 0.02}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.1651081242237, 'force': 2.5711041228078197e-05, 'pressure': -7.19, 'n_unique_k_points': 0.02}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.102545859149, 'force': 7.71331236842346e-05, 'pressure': -5.53, 'n_unique_k_points': 0.02}

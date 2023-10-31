@@ -7,7 +7,7 @@
     disk_io = 'none'
 / 
 &SYSTEM
-    ecutwfc = 75
+    ecutwfc = 5
     ntyp = 1
     nat = 2
     ibrav = 0
