@@ -1,4 +1,4 @@
-## Fixes for bugs for running `pw.x < pwscf.in > pwscf.out`
+### Fix for bugs for running `pw.x < pwscf.in > pwscf.out`
 
 Problem 1: **pw.x command not found**
 Fix: make sure to add executable directory to $PATH
@@ -13,5 +13,7 @@ then change `pseudo_dir = '/home/gridsan/<USER>/3320_atomistic_shared/q-e/pseudo
 
 Now running `pw.x < pwscf.in > pwscf.out` should work
 
-Problem 3: `/bin/sh: 1: mpirun: Permission denied` when running Quantum Expresso since it runs MPI 
+
+### Fix for bugs for running MPI
+Problem: `/bin/sh: 1: mpirun: Permission denied` when running Quantum Expresso since it runs MPI 
 Solution: Make sure MPI is loaded `module load mpi/openmpi-4.1.5`
