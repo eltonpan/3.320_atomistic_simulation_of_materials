@@ -1,3 +1,5 @@
+import sys, os
+sys.path.append("/home/gridsan/{}/".format(os.environ['USER']))
 from labutil.src.objects import *
 import numpy
 
@@ -90,8 +92,17 @@ def run_qe_pwscf(struc, runpath, pseudopots, params, kpoints, constraint=None, n
     run_command(pwscf_command)
     return outfile
 
+def run_qe_pwscf_from_input_file(file_path, ncpu=1):
+    """ Runs QE directly on an input file (for Lab 3 Problem 1C)
+    """
+    pwscf_code = ExternalCode({'path': os.environ['PWSCF_COMMAND']})
+    infile_path = file_path
+    outfile_path = f'{file_path[:-3]}.out'
+    pwscf_command = "mpirun -np {} {} < {} > {}".format(ncpu, pwscf_code.path, infile_path, outfile_path)
+    run_command(pwscf_command)
 
-def parse_qe_pwscf_output(outfile):
+
+def parse_qe_pwscf_output(outfile, return_vol = False):
     with open(outfile.path, 'r') as outf:
         for line in outf:
             if line.lower().startswith('     pwscf'):
@@ -103,6 +114,17 @@ def parse_qe_pwscf_output(outfile):
             if line.lower().startswith('          total   stress'):
                 pressure = float(line.split()[-1])
             if line.lower().startswith('     number of k points='):
-                n_unique_k_points = float(line.split()[-1])
-    result = {'energy': total_energy, 'force': total_force, 'pressure': pressure, 'n_unique_k_points': n_unique_k_points}
+                n_unique_k_points = float(line.split('     number of k points=')[-1].split()[0])
+            if return_vol:
+                if line.lower().startswith('     unit-cell volume'):
+                    vol = float(line.split('     unit-cell volume          =')[-1].split(' (a.u.)^3')[0])
+
+    if return_vol:
+        result = {'energy': total_energy, 'force': total_force, 'pressure': pressure, 'n_unique_k_points': n_unique_k_points, 'vol': vol}
+    else:
+        result = {'energy': total_energy, 'force': total_force, 'pressure': pressure, 'n_unique_k_points': n_unique_k_points}
     return result
+
+if __name__ == "__main__":
+    outfile = Dir(path = "/home/gridsan/epan1/labutil/lab3_samples/problem1/Lab3/Fe_bcc_a_2.8046394196999995_ecut_30_nk_7/pwscf.out")
+    print(parse_qe_pwscf_output(outfile, return_vol = True))
