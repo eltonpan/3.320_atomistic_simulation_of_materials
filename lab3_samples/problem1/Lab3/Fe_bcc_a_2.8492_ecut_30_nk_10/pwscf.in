@@ -1,0 +1,41 @@
+&CONTROL
+    calculation = 'scf'
+    pseudo_dir = '/home/gridsan/epan1/labutil/lab3_samples/pseudopotentials/'
+    outdir = '/home/gridsan/epan1/labutil/lab3_samples/problem1/Lab3/Fe_bcc_a_2.8492_ecut_30_nk_10'
+    tstress = .true.
+    tprnfor = .true.
+    disk_io = 'none'
+/ 
+&SYSTEM
+    ecutwfc = 30
+    ecutrho = 240
+    nspin = 2
+    starting_magnetization(1) = 1
+    starting_magnetization(2) = -1
+    occupations = 'smearing'
+    smearing = 'mp'
+    degauss = 0.02
+    ntyp = 1
+    nat = 2
+    ibrav = 0
+/ 
+&ELECTRONS
+    diagonalization = 'david'
+    mixing_beta = 0.5
+    conv_thr = 1e-07
+/ 
+&IONS
+/ 
+&CELL
+/ 
+K_POINTS {automatic}
+ 10 10 10  0 0 0
+ATOMIC_SPECIES
+  Fe 55.845 Fe.pbe-nd-rrkjus.UPF
+CELL_PARAMETERS {angstrom}
+ -2.8492 2.8492 2.8492
+ 1.4246 -1.4246 1.4246
+ 1.4246 1.4246 -1.4246
+ATOMIC_POSITIONS {angstrom}
+  Fe 0.00000 0.00000 0.00000
+  Fe -1.42460 1.42460 1.42460

@@ -1,0 +1,23 @@
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Atoms(symbols='Fe2', pbc=True, cell=[[1.9, 0.0, 0.0], [-0.95, 1.6454482671904334, 0.0], [0.0, 0.0, 3.102687007525359]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1500.4800816355853, 'force': 0.0, 'pressure': 9548.98, 'n_unique_k_points': 84.0, 'vol': 65.4595}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.2, 0.0, 0.0], [-1.1, 1.905255888325765, 0.0], [0.0, 0.0, 3.592584956081995]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1515.8323828909563, 'force': 0.0, 'pressure': 1648.04, 'n_unique_k_points': 84.0, 'vol': 101.6201}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1517.9450760948157, 'force': 0.0, 'pressure': 204.38, 'n_unique_k_points': 186.0, 'vol': 149.1185}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.8, 0.0, 0.0], [-1.4, 2.424871130596428, 0.0], [0.0, 0.0, 4.572380853195265]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1517.5375930569298, 'force': 0.0, 'pressure': -221.54, 'n_unique_k_points': 84.0, 'vol': 209.5008}
+Atoms(symbols='Fe2', pbc=True, cell=[[3.1, 0.0, 0.0], [-1.55, 2.68467875173176, 0.0], [0.0, 0.0, 5.062278801751901]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1515.8860022667493, 'force': 0.00020568832982462558, 'pressure': -247.68, 'n_unique_k_points': 504.0, 'vol': 284.313}
+energies: [-55.141581951558564, -55.705768166476716, -55.783408147749995, -55.76843343425499, -55.70773864062073]
+volumes: [65.4595, 101.6201, 149.1185, 209.5008, 284.313]

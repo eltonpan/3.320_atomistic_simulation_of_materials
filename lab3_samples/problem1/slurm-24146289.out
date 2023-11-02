@@ -1,0 +1,79 @@
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+STOP 3
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+STOP 3
+STOP 3
+STOP 3
+STOP 3
+STOP 3
+STOP 3
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[26622,1],6]
+  Exit code:    3
+--------------------------------------------------------------------------
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1529.3191857956658, 'force': 0.014218205799127243, 'pressure': 35.45, 'n_unique_k_points': 1.0}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.134407274709, 'force': 0.026610927671060932, 'pressure': -14.25, 'n_unique_k_points': 6.0}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.2895880163994, 'force': 2.5711041228078197e-05, 'pressure': -7.95, 'n_unique_k_points': 8.0}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.240437432136, 'force': 0.0, 'pressure': -5.39, 'n_unique_k_points': 21.0}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.1050248173365, 'force': 0.00017997728859654738, 'pressure': -7.96, 'n_unique_k_points': 27.0}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.1651081242237, 'force': 2.5711041228078197e-05, 'pressure': -7.19, 'n_unique_k_points': 52.0}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.102545859149, 'force': 7.71331236842346e-05, 'pressure': -5.53, 'n_unique_k_points': 64.0}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.1347762612404, 'force': 5.1422082456156395e-05, 'pressure': -7.01, 'n_unique_k_points': 105.0}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.1264717513118, 'force': 2.5711041228078197e-05, 'pressure': -6.59, 'n_unique_k_points': 125.0}
+Atoms(symbols='Fe2', pbc=True, cell=[[2.5, 0.0, 0.0], [-1.25, 2.1650635094610964, 0.0], [0.0, 0.0, 4.08248290463863]]) [26 26]
+{'Fe': {'mass': 55.845, 'kind': 1}}
+{'energy': -1518.1267913491595, 'force': 5.1422082456156395e-05, 'pressure': -6.78, 'n_unique_k_points': 186.0}

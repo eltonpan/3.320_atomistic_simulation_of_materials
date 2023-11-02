@@ -1,0 +1,8 @@
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Traceback (most recent call last):
+  File "/home/gridsan/epan1/labutil/lab3_samples/problem1/1C_run_input.py", line 7, in <module>
+    run_qe_pwscf_from_input_file(file_path = '1C_NM.in', ncpu=8)
+  File "/home/gridsan/epan1/labutil/src/plugins/pwscf.py", line 103, in run_qe_pwscf_from_input_file
+    return outfile
+           ^^^^^^^
+NameError: name 'outfile' is not defined
