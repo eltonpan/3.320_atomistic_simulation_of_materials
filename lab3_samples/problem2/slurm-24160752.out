@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/gridsan/epan1/labutil/lab3_samples/problem2/2C.py", line 90, in <module>
+    lattice_scan()
+  File "/home/gridsan/epan1/labutil/lab3_samples/problem2/2C.py", line 82, in lattice_scan
+    output = compute_energy(alat=alat, ecut=ecut, nk=nk, displ = displ)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gridsan/epan1/labutil/lab3_samples/problem2/2C.py", line 70, in compute_energy
+    params=input_params, kpoints=kpts, constraint=constraint, ncpu=2)
+                                                  ^^^^^^^^^^
+NameError: name 'constraint' is not defined. Did you mean: 'Constraint'?

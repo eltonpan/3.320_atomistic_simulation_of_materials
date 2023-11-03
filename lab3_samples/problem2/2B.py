@@ -44,7 +44,7 @@ def compute_energy(alat, nk, ecut, displ=0):
     runpath = Dir(path=os.path.join(os.getcwd(), "Lab3", dirname))
     input_params = PWscf_inparam({
         'CONTROL': {
-            'calculation': 'scf',
+            'calculation': 'relax',
             'pseudo_dir': '/home/gridsan/{}/labutil/lab3_samples/pseudopotentials/'.format(os.environ['USER']),
             'outdir': runpath.path,
             'tstress': True,
@@ -76,17 +76,20 @@ def compute_energy(alat, nk, ecut, displ=0):
 def lattice_scan():
     nk = 4
     ecut = 30
-    alat_list = numpy.linspace(3.8, 4.0, 11)
-    print(alat_list)
+    alat = 3.88
+    displ_list = numpy.linspace(-0.1, 0.1, 20)
+    print(displ_list)
     energy_list = []
-    for alat in alat_list:
-        output = compute_energy(alat=alat, ecut=ecut, nk=nk)
-        energy_list.append(output['energy'])
+    for displ in displ_list:
+        output = compute_energy(alat=alat, ecut=ecut, nk=nk, displ = displ)
+        energy_list.append(output['energy']/13.6057039763)
         print(output)
-    print(alat_list)
+    print(displ_list)
     print(energy_list)
-    plt.plot(alat_list, energy_list)
-    plt.savefig('2A.png', dpi = 100)
+    plt.plot(displ_list, energy_list)
+    plt.xlabel('Fraction displacement')
+    plt.ylabel('Energy (eV)')
+    plt.savefig('2B.png', dpi = 100)
     plt.show()
 
 

@@ -37,14 +37,14 @@ def compute_energy(alat, nk, ecut, displ=0):
                    'O': PseudoPotential(path=os.path.join(os.environ['ESPRESSO_PSEUDO'], 'O.pz-rrkjus.UPF'),     ptype='uspp', element='O',  functional='LDA', name='O.pz-rrkjus.UPF')}
     struc = make_struc(alat=alat, displacement=displ)
     # fix the Pb and Ti atoms in place during relaxation
-    constraint = Constraint(atoms={'0': [0,0,0], '1': [0,0,0]})
+    # constraint = Constraint(atoms={'0': [0,0,0], '1': [0,0,0]})
     kpts = Kpoints(gridsize=[nk, nk, nk], option='automatic', offset=True)
     dirname = 'PbTiO3_a_{}_ecut_{}_nk_{}_displ_{}'.format(alat, ecut, nk, displ)
     # runpath = Dir(path=os.path.join(os.environ['WORKDIR'], "Lab3/Problem2", dirname))
     runpath = Dir(path=os.path.join(os.getcwd(), "Lab3", dirname))
     input_params = PWscf_inparam({
         'CONTROL': {
-            'calculation': 'scf',
+            'calculation': 'relax',
             'pseudo_dir': '/home/gridsan/{}/labutil/lab3_samples/pseudopotentials/'.format(os.environ['USER']),
             'outdir': runpath.path,
             'tstress': True,
@@ -67,7 +67,7 @@ def compute_energy(alat, nk, ecut, displ=0):
         })
 
     output_file = run_qe_pwscf(runpath=runpath, struc=struc,  pseudopots=pseudopots,
-                               params=input_params, kpoints=kpts, constraint=constraint, ncpu=2)
+                               params=input_params, kpoints=kpts, ncpu=4)
     output = parse_qe_pwscf_output(outfile=output_file)
     return output
 
@@ -76,18 +76,12 @@ def compute_energy(alat, nk, ecut, displ=0):
 def lattice_scan():
     nk = 4
     ecut = 30
-    alat_list = numpy.linspace(3.8, 4.0, 11)
-    print(alat_list)
-    energy_list = []
-    for alat in alat_list:
-        output = compute_energy(alat=alat, ecut=ecut, nk=nk)
-        energy_list.append(output['energy'])
-        print(output)
-    print(alat_list)
-    print(energy_list)
-    plt.plot(alat_list, energy_list)
-    plt.savefig('2A.png', dpi = 100)
-    plt.show()
+    alat = 3.88
+    displ = 0.028
+
+    output = compute_energy(alat=alat, ecut=ecut, nk=nk, displ = displ)
+    print('energy:', output['energy']/13.6057039763)
+
 
 
 if __name__ == '__main__':

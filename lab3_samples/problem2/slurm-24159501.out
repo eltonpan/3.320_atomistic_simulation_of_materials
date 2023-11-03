@@ -1,0 +1,49 @@
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+[-0.1        -0.08947368 -0.07894737 -0.06842105 -0.05789474 -0.04736842
+ -0.03684211 -0.02631579 -0.01578947 -0.00526316  0.00526316  0.01578947
+  0.02631579  0.03684211  0.04736842  0.05789474  0.06842105  0.07894737
+  0.08947368  0.1       ]
+{'energy': -4532.062028036743, 'force': 8.054292197190232, 'pressure': 109.36, 'n_unique_k_points': 6.0}
+{'energy': -4532.423732934745, 'force': 5.877132648079027, 'pressure': 78.43, 'n_unique_k_points': 6.0}
+{'energy': -4532.69190015517, 'force': 4.1375493096284846, 'pressure': 52.84, 'n_unique_k_points': 6.0}
+{'energy': -4532.884495750201, 'force': 2.7784636703122705, 'pressure': 32.64, 'n_unique_k_points': 6.0}
+{'energy': -4533.01715960582, 'force': 1.7549842521461616, 'pressure': 15.16, 'n_unique_k_points': 6.0}
+{'energy': -4533.10393878894, 'force': 1.0166917032818963, 'pressure': 1.21, 'n_unique_k_points': 6.0}
+{'energy': -4533.157060740412, 'force': 0.5172290163852491, 'pressure': -8.06, 'n_unique_k_points': 6.0}
+{'energy': -4533.1868407562815, 'force': 0.21792678544919078, 'pressure': -16.43, 'n_unique_k_points': 6.0}
+{'energy': -4533.201696545885, 'force': 0.06630877532721367, 'pressure': -20.22, 'n_unique_k_points': 6.0}
+{'energy': -4533.207532846128, 'force': 0.011749945841231737, 'pressure': -22.84, 'n_unique_k_points': 6.0}
+{'energy': -4533.207530805274, 'force': 0.011312858140354407, 'pressure': -22.41, 'n_unique_k_points': 6.0}
+{'energy': -4533.201697498284, 'force': 0.0672343728114245, 'pressure': -21.17, 'n_unique_k_points': 6.0}
+{'energy': -4533.186841300509, 'force': 0.2178239412842785, 'pressure': -16.32, 'n_unique_k_points': 6.0}
+{'energy': -4533.15706169281, 'force': 0.5174089936738456, 'pressure': -8.45, 'n_unique_k_points': 6.0}
+{'energy': -4533.103939605281, 'force': 1.0162546155810188, 'pressure': 1.63, 'n_unique_k_points': 6.0}
+{'energy': -4533.017160150048, 'force': 1.7553699177645827, 'pressure': 15.21, 'n_unique_k_points': 6.0}
+{'energy': -4532.884496838657, 'force': 2.781369017971043, 'pressure': 31.9, 'n_unique_k_points': 6.0}
+{'energy': -4532.691900427284, 'force': 4.136469445896904, 'pressure': 53.53, 'n_unique_k_points': 6.0}
+{'energy': -4532.423732662631, 'force': 5.873790212719376, 'pressure': 79.45, 'n_unique_k_points': 6.0}
+{'energy': -4532.062027492515, 'force': 8.052980934087602, 'pressure': 109.83, 'n_unique_k_points': 6.0}
+[-0.1        -0.08947368 -0.07894737 -0.06842105 -0.05789474 -0.04736842
+ -0.03684211 -0.02631579 -0.01578947 -0.00526316  0.00526316  0.01578947
+  0.02631579  0.03684211  0.04736842  0.05789474  0.06842105  0.07894737
+  0.08947368  0.1       ]
+[-333.1001494616682, -333.1267342601198, -333.1464441715578, -333.1605996754087, -333.17035028117306, -333.1767284284024, -333.18063281670635, -333.1828216057555, -333.1839134852812, -333.18434244509484, -333.18434229509495, -333.1839135552812, -333.1828216457555, -333.1806328867063, -333.1767284884024, -333.17035032117303, -333.16059975540867, -333.1464441915578, -333.1267342401198, -333.1001494216682]

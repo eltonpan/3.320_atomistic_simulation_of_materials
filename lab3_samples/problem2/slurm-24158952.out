@@ -1,0 +1,25 @@
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+[3.8  3.82 3.84 3.86 3.88 3.9  3.92 3.94 3.96 3.98 4.  ]
+{'energy': -4533.0646864860755, 'force': 0.0, 'pressure': 123.33, 'n_unique_k_points': 4.0}
+{'energy': -4533.128869053733, 'force': 0.0, 'pressure': 81.99, 'n_unique_k_points': 4.0}
+{'energy': -4533.173982691324, 'force': 0.0, 'pressure': 45.01, 'n_unique_k_points': 4.0}
+{'energy': -4533.202041450331, 'force': 0.0, 'pressure': 9.94, 'n_unique_k_points': 4.0}
+{'energy': -4533.2081321771275, 'force': 0.0, 'pressure': -22.86, 'n_unique_k_points': 4.0}
+{'energy': -4533.1964891010075, 'force': 0.0, 'pressure': -53.71, 'n_unique_k_points': 4.0}
+{'energy': -4533.172149459567, 'force': 0.0, 'pressure': -81.65, 'n_unique_k_points': 4.0}
+{'energy': -4533.129891385886, 'force': 0.0, 'pressure': -107.88, 'n_unique_k_points': 4.0}
+{'energy': -4533.069470521629, 'force': 0.0, 'pressure': -132.39, 'n_unique_k_points': 4.0}
+{'energy': -4532.9956964810635, 'force': 0.0, 'pressure': -154.36, 'n_unique_k_points': 4.0}
+{'energy': -4532.90874668249, 'force': 0.0, 'pressure': -175.43, 'n_unique_k_points': 4.0}
+[3.8  3.82 3.84 3.86 3.88 3.9  3.92 3.94 3.96 3.98 4.  ]
+[-4533.0646864860755, -4533.128869053733, -4533.173982691324, -4533.202041450331, -4533.2081321771275, -4533.1964891010075, -4533.172149459567, -4533.129891385886, -4533.069470521629, -4532.9956964810635, -4532.90874668249]
