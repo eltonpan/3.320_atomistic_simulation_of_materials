@@ -1,0 +1,6 @@
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+[[2.766 0.    0.   ]
+ [0.    2.766 0.   ]
+ [0.    0.    3.623]]
+{'Au': {'mass': 196.966569, 'kind': 1}, 'Cu': {'mass': 63.546, 'kind': 2}}
+{'energy': -2105.2103202679664, 'force': 0.0, 'pressure': -0.16, 'n_unique_k_points': 126.0}

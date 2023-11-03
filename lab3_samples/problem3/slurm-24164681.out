@@ -1,0 +1,72 @@
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+STOP 3
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+STOP 3
+STOP 3
+STOP 3
+STOP 3
+STOP 3
+STOP 3
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[54145,1],4]
+  Exit code:    3
+--------------------------------------------------------------------------
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+Atoms(symbols='Au', pbc=True, cell=[[0.0, 2.0, 2.0], [2.0, 0.0, 2.0], [2.0, 2.0, 0.0]]) [79]
+{'Au': {'mass': 196.966569, 'kind': 1}}
+{'energy': -909.8676677078274, 'force': 0.0, 'pressure': 0.4, 'n_unique_k_points': 120.0}

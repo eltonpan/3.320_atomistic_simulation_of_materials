@@ -1,41 +1,39 @@
 &CONTROL
     calculation = 'vc-relax'
-    tprnfor = .true.
-    tstress = .true.
     pseudo_dir = '/home/gridsan/epan1/labutil/lab3_samples/pseudopotentials/'
-    outdir = '/home/gridsan/epan1/labutil/lab3_samples/workdir/AuCu0_3.0'
+    outdir = '/home/gridsan/epan1/labutil/lab3_samples/problem3/Lab3/Au_a_4.0_ecut_40_nk_11'
+    tstress = .true.
+    tprnfor = .true.
     disk_io = 'none'
 / 
 &SYSTEM
-    ibrav = 0
-    nat = 2
-    ntyp = 2
     ecutwfc = 40
     ecutrho = 320
+    nspin = 2
+    starting_magnetization(1) = 0.7
     occupations = 'smearing'
     smearing = 'mp'
-    degauss = 0.02    
-/
+    degauss = 0.02
+    ntyp = 1
+    nat = 1
+    ibrav = 0
+/ 
 &ELECTRONS
     diagonalization = 'david'
-    mixing_beta = 0.2
+    mixing_beta = 0.5
     conv_thr = 1e-07
 / 
 &IONS
-    ion_dynamics = 'bfgs'
 / 
 &CELL
-    cell_dynamics = 'bfgs'
 / 
 K_POINTS {automatic}
- 8 8 8  0 0 0
+ 11 11 11  0 0 0
 ATOMIC_SPECIES
-  Cu 63.546 Cu.pz-d-rrkjus.UPF
-  Au 196.9665 Au.pz-d-rrkjus.UPF
+  Au 196.966569 Au.pz-d-rrkjus.UPF
 CELL_PARAMETERS {angstrom}
- 3.0 0.0 0.0
- 0.0 3.0 0.0
- 0.0 0.0 3.3
+ 0.0 2.0 2.0
+ 2.0 0.0 2.0
+ 2.0 2.0 0.0
 ATOMIC_POSITIONS {angstrom}
   Au 0.00000 0.00000 0.00000
-  Cu 1.50000 1.50000 1.65000

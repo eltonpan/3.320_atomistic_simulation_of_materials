@@ -1,0 +1,9 @@
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG
+Note: The following floating-point exceptions are signalling: IEEE_DENORMAL
+Note: The following floating-point exceptions are signalling: IEEE_INVALID_FLAG IEEE_DENORMAL
+Atoms(symbols='Cu', pbc=True, cell=[[0.0, 1.75, 1.75], [1.75, 0.0, 1.75], [1.75, 1.75, 0.0]]) [29]
+{'Cu': {'mass': 63.546, 'kind': 1}}
+{'energy': -1195.5107991239156, 'force': 0.0, 'pressure': 0.06, 'n_unique_k_points': 4.0}
