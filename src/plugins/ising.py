@@ -97,7 +97,7 @@ def mc_run(N,n_eq,n_mc,T):
     Inputs:
         N - lattice size (NxN)
         n_eq - average number of spin flip attempts per site to come to equilibrium
-        n_mc - average number of spin flip attemots per site to fluctuate
+        n_mc - average number of spin flip attempts per site to fluctuate
         T - temperature
         
     Outputs:

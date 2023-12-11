@@ -1,9 +1,13 @@
+import sys
+import os
+sys.path.append("/home/gridsan/{}/".format(os.environ['USER']))
 from labutil.src.plugins.ising import *
 import matplotlib.pyplot as plt
+import pdb
 
 # Variable initialization
 
-T = 2 # Temperature range to scan (units of K_b = 1)
+T = 3 # Temperature range to scan (units of K_b = 1)
 N = 12                      # Spin lattice size
 
 n_eq = 75          # Average number of equilibriation steps (flips) per site
